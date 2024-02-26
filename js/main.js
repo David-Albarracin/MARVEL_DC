@@ -159,16 +159,22 @@ heroes.forEach(hero => {
 const showHero = (id) =>{
     const hero = heroes.find(hero => hero.id == id)
     dialog.innerHTML = `
-        <button onclick="dialog.close()" class="button">
-            X 
-        </button>
-        <div class="card">
+        <div class="dialog-buttons">
+            <button onclick="dialog.close()" class="button">
+                <i class='bx bx-arrow-back'></i>
+            </button>
+            <button onclick="dialog.close()" class="button">
+                <i class='bx bx-x'></i>
+            </button>
+        </div>
+        <div class="dialog">
             <div class="card-header">
                 <img src="${hero.img}" alt="img">
             </div>
-            <div class="card-body">
-                <h2>${(hero.name).replace("-", " ")}</h2>
-
+            <div class="dialog-body">
+                <h2 class="text-color">${(hero.name).replace("-", " ")}</h2>
+                <p class="text-color">${hero.description}</p>
+                <span class="text-color-red">${hero.created_at}</span>
             </div>
         </div>
     `;
