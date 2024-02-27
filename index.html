@@ -11,11 +11,25 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <header class="header">
+        <select class="input" name="selectCategory" id="selectCategory">
+            <option value="all">ALL</option>
+            <option value="marvel">MARVEL</option>
+            <option value="dc">DC</option>
+        </select>
+        <div class="search">
+            <label for="searchInput">BUSCAR</label>
+            <input id="searchInput" class="input" type="text" placeholder="Buscar Heroes">
+            <button id="searchBtn">
+                <i class="bx bx-search"></i>
+            </button>
+        </div>
+    </header>
     <main class="main">
 
         <div class="container">
 
-            <div class="section-title">
+            <div id="marvelTitle" class="section-title">
                 <div class="img">
                     <img src="./img/marvel.jpg" alt="logo">
                 </div>
@@ -28,7 +42,7 @@
             <div id="marvel" class="d-grid col-lg-3">
             </div>
 
-            <div class="section-title">
+            <div id="dcTitle" class="section-title">
                 <div class="img">
                     <img src="./img/dc.webp" alt="logo">
                 </div>
@@ -42,8 +56,12 @@
             </div>
 
         </div>
+
         <dialog class="dialog" id="dialog">
         </dialog>
     </main>
+    <footer>
+
+    </footer>
 </body>
 </html>

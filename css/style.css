@@ -1,11 +1,11 @@
+
+/* ================== ROOT ================== */
+
 :root{
     --first-color: rgb(253, 0, 25);
     --container-color: rgba(0, 0, 0, 0.704);
 }
 
-*{
-    color: white;
-}
 
 body{
     background-color: black;
@@ -16,7 +16,9 @@ img{
     height: auto;
 }
 
-/**/
+
+
+/* ================== lAYOUT ================== */
 
 .d-grid{
     display: grid;
@@ -27,17 +29,34 @@ img{
     margin-bottom: 2rem;
 }
 
-/**/
+.d-none{
+    display: none!important;
+}
+
+.d-flex {
+    display: flex;
+} 
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.container{
+    padding: 0.5rem 1rem;
+}
+
+/* ================== REUSABLE ================== */
 
 .section-title{
     display: flex;
     align-items: center;
 }
 
+
 .section-title .img{
     width: 150px;
     border-radius: 100%;
-    padding: 1rem;
+    padding-top: 1rem;
 }
 
 .section-title .img img{
@@ -51,7 +70,52 @@ img{
     font-size: 2rem;
 }
 
-/*=========== CARD ===========*/
+/* ================== HEADER ================== */
+
+.header {
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.input {
+    padding: 1rem;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.search input{
+    width: 100%;
+    max-width: 300px;
+}
+
+.search label{
+    display: none;
+}
+
+.search button{
+    position: relative;
+    right: 50px;
+    border-radius: 100%;
+    padding: 0.8rem;
+    border: none;
+}
+
+.search button i{
+    font-size: 1.25rem;
+}
+
+
+/* ================== CARD ================== */
 .card{
     display: flex;
     align-items: center;
@@ -62,6 +126,15 @@ img{
     /* border: 1px solid var(--first-color); */
     border-radius: 25px;
     background-color: var(--container-color);
+}
+
+.card:hover{
+    transform: scale(1.03);
+    transition: all 0.1s ease-in;
+}
+
+.card h2{
+    color: white;
 }
 
 .card-body {
@@ -75,25 +148,30 @@ img{
     text-transform: capitalize;
 }
 
+.id-company{
+    color: white;
+}
+
 
 .button {
+    cursor: pointer;
     padding: 10px 30px;
     border-radius: 10px;
     border: none;
-    color: black;
     font-size: 1.2rem;
     font-weight: 500;
     /* max-height: 50px; */
 }
 
 .text-color{
-    color: black;
+    color: white;
 }
+
 .text-color-red{
     color: red;
 }
 
-/**/
+/* ================== DIALOG ================== */
 
 ::backdrop {
     background-color: var(--container-color);
@@ -104,7 +182,6 @@ dialog{
     border-radius: 25px;
     border: none;
     max-width: 600px;
-
 }
 
 
@@ -124,17 +201,16 @@ dialog{
     background: none;
 }
 
-button i{
-    color: black;
-}
 
 .marvel{
-    box-shadow: var(--first-color) 0px 2px 8px 1px;
+    box-shadow: var(--first-color) 0px 2px 4px 1px;
 }
 
 .dc{
-    box-shadow: blue 0px 2px 8px 1px;
+    box-shadow: blue 0px 2px 4px 1px;
 }
+
+/* ================== BREAKPOINTS ================== */
 
 @media (min-width: 992px) {
     .col-lg-3{
