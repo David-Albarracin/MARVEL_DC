@@ -74,7 +74,7 @@ const heroes = [
     {
         id: "9",
         category: "dc",
-        name: "Superman",
+        name: "superman",
         img: "https://sm.ign.com/t/ign_es/screenshot/default/01-superman_595m.960.jpg",
         description: "Superman, también conocido como Clark Kent, es uno de los superhéroes más icónicos de DC Comics. Es un alienígena que lucha por la justicia en Metrópolis.",
         created_at: "1938"
@@ -247,9 +247,9 @@ const searchHero = () => {
     //Reiniciamos los Contenedores
     marvelContainer.innerHTML = ``
     dcContainer.innerHTML = ``
-
+    
     //Tomamos el Valor que Exista en el Input de Search
-    const text = inputSearch.value;
+    const text = inputSearch.value.toLowerCase();
     //Buscamos el Héroe en heroes con un includes para tener mas rango
     const hero = heroes.find(hero => hero.name.includes(text) ? hero : null);
 
