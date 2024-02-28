@@ -50,6 +50,7 @@ img{
 .section-title{
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 
@@ -61,21 +62,21 @@ img{
 
 .section-title .img img{
     border-radius: 100%;
-    height: 120px;
+    height: 125px;
 }
 
 .section-title span{
     padding: 0 1rem;
     font-weight: 600;
     font-size: 2rem;
+    display: none;
 }
 
 /* ================== HEADER ================== */
 
 .header {
     display: flex;
-    height: 4rem;
-    align-items: center;
+    flex-direction: column;
     padding: 0 1rem;
 }
 
@@ -90,21 +91,21 @@ img{
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 0 2rem;
 }
 
 .search input{
     width: 100%;
-    max-width: 300px;
 }
+
+
 
 .search label{
     display: none;
 }
 
 .search button{
-    position: relative;
-    right: 50px;
+    position: absolute;
+    right: 0;
     border-radius: 100%;
     padding: 0.8rem;
     border: none;
@@ -217,6 +218,31 @@ dialog{
         gap: 1.5rem;
         grid-template-columns: repeat(4, 1fr);
     } 
+
+    .section-title{
+        text-align: start;
+    }
+
+    .header{
+        flex-direction: row;
+    }
+
+    .header select{
+        margin-right: 1rem;
+    }
+
+    .search input{
+        max-width: 400px;
+    }
+
+    .section-title span{
+        display: block;
+    }
+
+    .search button{
+        position: relative;
+        right: 50px;
+    }
 }
 
 
