@@ -10,7 +10,7 @@ let heroes = [];
 
 document.addEventListener('DOMContentLoaded', async (e) => {
     try {
-        const data = await fetch('./data/data.json').then(res => res.json());
+        const data = await fetch('https://david-albarracin.github.io/MARVEL_DC/data/data.json').then(res => res.json());
         heroes =  data.heroes;
         loadData(heroes);
     } catch (error) {
